@@ -1,0 +1,11 @@
+@use "styles/abstracts/mixins.scss";
+@use "styles/colors.scss";
+.input {
+    @include mixins.input;
+
+    @include mixins.respond(from-tab-land) {
+        padding: 1rem 2.5rem;
+    }
+    
+    border: 1px solid colors.$bc;
+}

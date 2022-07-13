@@ -1,0 +1,46 @@
+@use "styles/abstracts/mixins.scss";
+@use "styles/colors.scss";
+.login {
+    @include mixins.center;
+    width: 100vw;
+    height: 100vh;
+    background-color: colors.$bc-dark;
+}
+.imageContainer {
+    background-color: colors.$sub;
+    border-radius: 50%;
+    padding: 1.8rem;
+    width: 32vh;
+    object-fit: cover;
+    margin-bottom: 3rem;
+    @include mixins.respond(from-tab-land) {
+        margin-bottom: 5rem;
+    }
+}
+
+.formContainer {
+    @include mixins.center;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.label {
+    @include mixins.label;
+}
+.card {
+    @include mixins.card;
+    @include mixins.boxShadow;
+    background-color: colors.$bc;
+}
+
+.submitButton {
+    @include mixins.button;
+    @include mixins.respond(from-tab-land) {
+        padding: 2rem 3rem;
+    }
+
+    margin-top: 3rem;
+}
