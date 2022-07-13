@@ -1,0 +1,14 @@
+@use "styles/abstracts/mixins.scss";
+@use "styles/colors.scss";
+.searchbar {
+    input {
+        @include mixins.input;
+        background-color: colors.$bc-dark;
+        width: 80%;
+        height: 5rem;
+        &::placeholder {
+            text-transform: capitalize;
+        }
+        margin-bottom: 3rem;
+    }
+}

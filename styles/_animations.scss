@@ -60,7 +60,7 @@
 
 @keyframes bounce {
     0% {
-        transform: rotate(90deg) translateX(-.5rem);
+        transform: rotate(90deg) translateX(-0.5rem);
     }
 
     50% {
@@ -68,7 +68,6 @@
     }
 
     100% {
-        transform: rotate(90deg) translateX(-.5rem);
+        transform: rotate(90deg) translateX(-0.5rem);
     }
-
 }

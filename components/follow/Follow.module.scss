@@ -1,0 +1,11 @@
+@use "styles/abstracts/mixins.scss";
+@use "styles/colors.scss";
+.item {
+    @include mixins.headerPublication;
+    padding-bottom: 0;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid colors.$bc-dark;
+    &:first-of-type {
+        border-top: 1px solid colors.$bc-dark;
+    }
+}

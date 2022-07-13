@@ -1,0 +1,27 @@
+@use "styles/abstracts/mixins.scss";
+@use "styles/colors.scss";
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.config {
+    width: 20%;
+}
+
+.feed {
+    padding: 3rem;
+    width: 50%;
+    overflow-x: hidden;
+}
+
+.related {
+    @include mixins.boxShadowRight;
+    padding: 3rem;
+    width: 30%;
+    z-index: 2;
+    box-shadow: 10px 0 30px 1px black;
+    overflow: scroll;
+}

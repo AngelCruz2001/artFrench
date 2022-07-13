@@ -61,7 +61,10 @@
 }
 
 @mixin boxShadow {
-    box-shadow: 0 0 2.5rem 1rem rgba($primary-dark, 0.3);
+    box-shadow: 10px 0px 5px 1px rgba($primary-dark, 0.3);
+}
+@mixin boxShadowRight {
+    box-shadow: 0 -1 20.5rem 10rem green;
 }
 
 @mixin card {
@@ -104,7 +107,7 @@
     text-align: left;
     border: 1px solid transparent;
     @include transition;
-    
+
     &::placeholder {
         color: $color-white;
         text-transform: lowercase;
@@ -127,5 +130,48 @@
         &:hover {
             @content;
         }
+    }
+}
+
+@mixin plusIcon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4rem;
+    height: 4rem;
+    @include transition;
+
+    &:hover {
+        color: $primary-dark;
+        cursor: pointer;
+    }
+}
+
+@mixin headerPublication {
+    display: flex;
+    height: auto;
+    align-items: center;
+    position: relative;
+    padding-bottom: 1rem;
+    color: $color-white;
+
+    img {
+        width: 7rem;
+        height: 7rem;
+        padding: 0.5rem;
+        background-color: $color-white;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 2rem;
+    }
+
+    p {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    svg {
+        @include plusIcon;
     }
 }

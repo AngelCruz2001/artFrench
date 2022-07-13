@@ -1,16 +1,19 @@
 import styles from "./Login.module.scss";
+import { useRouter } from 'next/router';
 import { Card } from "components";
 import Image from "next/image";
 import { useFormik } from 'formik';
 import { Input } from 'components';
 import * as Yup from 'yup';
-export const Login = () => {
 
+export const Login = () => {
+    const router = useRouter();
     const formik = useFormik({
         initialValues: {
             email: '',
             password: ''
         },
+
         validationSchema: Yup.object({
             email: Yup.string()
                 .email('Invalid email address')
@@ -19,7 +22,7 @@ export const Login = () => {
                 .required('Required')
         }),
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
+            router.push('/dashboard');
         },
     });
 

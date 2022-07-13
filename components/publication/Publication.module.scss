@@ -1,0 +1,28 @@
+@use "styles/abstracts/mixins.scss";
+@use "styles/colors.scss";
+@use "styles/animations.scss";
+.publication {
+    @include mixins.card;
+    background-color: colors.$bc-dark;
+    display: flex;
+    flex-direction: column;
+    color: colors.$color-white;
+    margin-bottom: 2rem;
+}
+
+.header {
+    @include mixins.headerPublication;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    p {
+        margin-bottom: 0.5rem;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
